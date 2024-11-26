@@ -58,7 +58,7 @@ resource "aws_instance" "ce7_grp3_ec2" {
 
   user_data = file("scripts/install_helloworld.sh")
 
-  security_groups = [aws_security_group.ce7_grp3_sg.name]
+  security_groups = [aws_security_group.ce7_grp3_sg.id]
 
   depends_on = [aws_security_group.ce7_grp3_sg]
 }
