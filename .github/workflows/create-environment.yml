@@ -31,6 +31,3 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-
-      - name: Output instance IP
-        run: echo "Public IP of EC2: $(terraform output instance_public_ip)"
