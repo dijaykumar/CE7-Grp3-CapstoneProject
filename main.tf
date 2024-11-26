@@ -11,6 +11,15 @@ resource "aws_vpc" "ce7_grp3_vpc" {
   }
 }
 
+# Internet Gateway (IGW)
+resource "aws_internet_gateway" "ce7_grp3_igw" {
+  vpc_id = aws_vpc.ce7_grp3_vpc.id
+
+  tags = {
+    Name = "CE7-Grp3-IGW"
+  }
+}
+
 # Subnet
 resource "aws_subnet" "ce7_grp3_subnet" {
   vpc_id                  = aws_vpc.ce7_grp3_vpc.id
@@ -20,6 +29,26 @@ resource "aws_subnet" "ce7_grp3_subnet" {
   tags = {
     Name = "CE7-Grp3-Subnet"
   }
+}
+
+# Route Table for Public Subnet
+resource "aws_route_table" "ce7_grp3_route_table" {
+  vpc_id = aws_vpc.ce7_grp3_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.ce7_grp3_igw.id
+  }
+
+  tags = {
+    Name = "CE7-Grp3-RouteTable"
+  }
+}
+
+# Associate Route Table with Subnet
+resource "aws_route_table_association" "ce7_grp3_route_table_association" {
+  subnet_id      = aws_subnet.ce7_grp3_subnet.id
+  route_table_id = aws_route_table.ce7_grp3_route_table.id
 }
 
 # Security Group
