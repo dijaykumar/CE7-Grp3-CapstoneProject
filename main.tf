@@ -67,3 +67,12 @@ resource "aws_instance" "ce7_grp3_ec2" {
 output "instance_public_ip" {
   value = aws_instance.ce7_grp3_ec2.public_ip
 }
+
+terraform {
+  backend "s3" {
+    bucket = "sctp-ce7-tfstate"       # Create this bucket in AWS S3
+    key    = "terraform/ce7-grp3/terraform.tfstate"
+    region = "us-east-1"
+    encrypt = true
+  }
+}
