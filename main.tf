@@ -48,7 +48,7 @@ resource "aws_security_group" "ce7_grp3_sg" {
 resource "aws_instance" "ce7_grp3_ec2" {
   ami                    = "ami-0c55b159cbfafe1f0"  # Replace with your desired AMI (Amazon Linux 2)
   instance_type          = "t2.micro"
-  key_name               = "your-ssh-key"           # Replace with your SSH key name
+  key_name               = "CE7-Grp3-KeyPair"           # Replace with your SSH key name
   subnet_id              = aws_subnet.ce7_grp3_subnet.id
   security_group_ids     = [aws_security_group.ce7_grp3_sg.id]
   associate_public_ip_address = true
