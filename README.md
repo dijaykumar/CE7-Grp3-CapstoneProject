@@ -1,10 +1,11 @@
 ### CE7 Capstone Project Group 3
 
 Team members
-- MOHAMED SHAFIQ BIN GHULAM HUSSEIN
-- MUHAMMAD ALIF BIN MOHD YUSRI
-- MUHAMMAD KHAIRULARIFIN BIN RAZALI
-- DIJAY KUMAR VALAUTHAM
+
+- Mohamed Shafiq Bin Ghulam Hussein
+- Muhammad Alif Bin Mohd Yusri
+- Muhammad Khairularifin Bin Razali
+- Dijay Kumar Valautham
 
 ------------
 
@@ -20,7 +21,7 @@ This capstone project will be executed in three distinct phases to ensure a thor
 
 **Phase 1: AWS Console Implementation**
 
-In the first phase, the team will manually create and configure essential AWS resources using the AWS Management Console. These resources will include a Virtual Private Cloud (VPC), security groups, CloudWatch dashboards, and alarms. The goal of this phase is to establish a functional monitoring setup and gain a deeper understanding of the AWS services involved.
+In the first phase, the team will manually create and configure essential AWS resources using the AWS Management Console. These resources will include a Virtual Private Cloud (VPC), Internet Gateway, Subnet, Security Group, EC2 Instance, CloudWatch dashboard, alarms, and more. The goal of this phase is to establish a functional monitoring setup and gain a deeper understanding of the AWS services involved.
 
 ![image](https://github.com/user-attachments/assets/4374b7df-daaf-4107-9a67-e946e66d141e)
 
@@ -37,3 +38,24 @@ In the final phase, the team will integrate continuous integration and continuou
 ![image](https://github.com/user-attachments/assets/4249283c-a931-42f1-ad81-e9a8e6e2334f)
 
 Each phase will build upon the previous one, creating a seamless transition from manual configuration to automated infrastructure management, ensuring both efficiency and reliability in the project's execution.
+
+------------
+
+### Project Resources and Naming Conventions:
+
+**Platforms**
+- AWS Management Console for Phase 1
+- Visual Studio Code for Phase 2
+- GitHub for Phase 3
+
+**AWS Resources**
+- Virtual private cloud (VPC): CE7-Grp3-VPC
+- Internet gateway (IGW): CE7-Grp3-IGW
+- Subnet: CE7-Grp3-Subnet
+- Route Table: CE7-Grp3-RouteTable
+- Security Group: CE7-Grp3-SG
+- Elastic compute cloud (EC2) Instance: CE7-Grp3-EC2
+- CloudWatch dashboard: CE7-Grp3-CloudWatchDashboard
+
+**GitHub**
+- Repository: CE7-Grp3-CapstoneProject
