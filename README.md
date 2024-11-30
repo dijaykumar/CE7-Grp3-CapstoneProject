@@ -150,3 +150,23 @@ Each phase will build upon the previous one, creating a seamless transition from
 9. In the **Launch Instance** wizard, under **Advanced Details**, paste the contents of the **install_helloworld.sh** script. This will run when the instance starts.
 10. Review and **Launch** the instance.
 
+**Step 7: Create a CloudWatch Dashboard to Monitor EC2 Metrics**
+
+1. Navigate to the **CloudWatch Dashboard**.
+- In the AWS Console, type **CloudWatch** in the search bar and select CloudWatch from the list of services.
+- In the left-hand navigation pane, click on **Dashboards** under the CloudWatch section.
+2. Create a **New Dashboard**.
+- Click on **Create dashboard** at the top of the CloudWatch Dashboard page.
+- In the create new dashboard window, enter **CE7-Grp3-CloudWatchDashboard** as the dashboard name and click **Create dashboard**.
+
+**Step 8: Add Widgets to the Dashboard**
+
+1. In the **Add widget** window, choose **Line** or **Time series** for visualization.
+2. Click **Configure** to select the metrics for the widget.
+3. Under the **Select metric** tab:
+- **Namespace**: Choose AWS/EC2.
+- **Metric name**: Choose CPUUtilization.
+- **Dimension**: Select InstanceId.
+- **InstanceId**: From the EC2 dashboard, get the Instance ID of your EC2 instance (**ce7_grp3_ec2**) that was previously launched.
+4. After selecting the correct instance, click **Create widget** to add the CPU Utilization graph to the dashboard.
+5. Perform steps 1 to 4 again to add the **Network Traffic** (NetworkIn, NetworkOut) and **Disk Operations** (DiskReadOps, DiskWriteOps) metrics.
