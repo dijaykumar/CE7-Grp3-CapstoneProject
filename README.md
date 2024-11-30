@@ -132,4 +132,21 @@ Each phase will build upon the previous one, creating a seamless transition from
 4. Under **Outbound rules**, click **Edit outbound rules** and leave it as default (allow all outbound traffic).
 5. Click **Create security group**.
 
+**Step 7: Create an EC2 Instance**
+
+1. In the **EC2 Dashboard**, click **Launch Instance**.
+2. Search for and choose the desired **AMI** (e.g., Amazon Linux, Ubuntu).
+3. Select the **t2.micro** instance type.
+4. Configure the instance:
+- **Network**: Select CE7-Grp3-VPC.
+- **Subnet**: Select CE7-Grp3-Subnet.
+- **Auto-assign Public IP**: Enable.
+5. Add Storage if needed (defaults are fine).
+6. Add **Tags**. **Name**: CE7-Grp3-EC2
+7. Configure **Security Group**:
+- Select **Create a new security group**.
+- Add the existing **CE7-Grp3-SG** security group created earlier.
+8. Add **Key Pair**. Select an existing key pair or create a new one (ensure you download and securely store the private key).
+9. In the **Launch Instance** wizard, under **Advanced Details**, paste the contents of the **install_helloworld.sh** script. This will run when the instance starts.
+10. Review and **Launch** the instance.
 
