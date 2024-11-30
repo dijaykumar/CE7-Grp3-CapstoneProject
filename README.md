@@ -59,3 +59,32 @@ Each phase will build upon the previous one, creating a seamless transition from
 
 **GitHub**
 - Repository: CE7-Grp3-CapstoneProject
+
+------------
+
+### Phase 1: AWS Console Implementation
+
+**Prerequisites**
+
+1. **AWS Account**: Make sure you have an AWS account.
+2. **Permissions**: Ensure your AWS user has the required permissions to create resources like VPCs, EC2 instances, security groups, IAM roles, S3 buckets, and so on. You might need the AdministratorAccess policy or specific permissions granted by your AWS admin.
+
+**Step 1: Create a VPC (Virtual Private Cloud)**
+
+1. **Login to AWS Console** and navigate to the **VPC Dashboard**.
+2. On the left sidebar, click **Your VPCs** and then click **Create VPC**.
+3. Configure the following settings:
+- **Name tag**: CE7-Grp3-VPC
+- **IPv4 CIDR block**: 10.0.0.0/16
+- Leave other settings as default.
+4. Click **Create** to create the VPC.
+
+**Step 2: Create an Internet Gateway (IGW)**
+
+1. In the VPC Dashboard, go to **Internet Gateways** in the left sidebar.
+2. Click **Create internet gateway**.
+3. Enter the following:
+- **Name tag**: CE7-Grp3-IGW
+4. Click **Create**.
+5. After creating the IGW, click on the newly created gateway and choose **Actions > Attach to VPC**.
+- Select the VPC you just created (e.g., CE7-Grp3-VPC) and click **Attach**.
