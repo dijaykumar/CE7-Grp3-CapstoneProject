@@ -170,3 +170,24 @@ Each phase will build upon the previous one, creating a seamless transition from
 - **InstanceId**: From the EC2 dashboard, get the Instance ID of your EC2 instance (**ce7_grp3_ec2**) that was previously launched.
 4. After selecting the correct instance, click **Create widget** to add the CPU Utilization graph to the dashboard.
 5. Perform steps 1 to 4 again to add the **Network Traffic** (NetworkIn, NetworkOut) and **Disk Operations** (DiskReadOps, DiskWriteOps) metrics.
+
+**Step 9: Enable VPC Flow Logs and Add Them to CloudWatch Dashboard**
+
+1. In the AWS Console, search for **VPC** and go to the **VPC Dashboard**.
+2. In the left-hand sidebar, click on **Your VPCs**. Select the VPC that you created (**CE7-Grp3-VPC**).
+3. In the VPC details page, go to the **Flow Logs** tab. Click **Create flow log**.
+4. Configure the following options:
+- **Filter**: Select All (to capture all traffic).
+- **Destination**: Choose Send to CloudWatch Logs.
+- **Log group**: Create a new log group or select an existing one (e.g., VPC-Flow-Logs).
+- **IAM role**: If it's not already set, create an IAM role with permissions to publish logs to CloudWatch (the AWS-managed policy AWSLogs can be used).
+5. Click **Create flow log** to enable VPC Flow Logs for the VPC.
+  
+6. Navigate to the **CloudWatch Dashboard**. In the CloudWatch dashboard, go to **Dashboards**. Select the dashboard **CE7-Grp3-CloudWatchDashboard** (the one you created earlier).
+7. Click **Add widget** on the top-right of the dashboard page and select **Log query** as the widget type.
+8. Configure the Log Query Widget:
+- **Log Group(s)**: Choose the log group that you created or selected earlier (e.g., VPC-Flow-Logs).
+- **Log Query**: You can either write a custom query or use a pre-built one to visualize the flow logs.
+- Click **Run query** to preview the results.
+9. Choose **Time series**, **Table**, or another visualization and click **Create widget** to add it to your CloudWatch Dashboard.
+10. After the widget is added, click **Save dashboard** in the top-right corner.
