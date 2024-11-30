@@ -88,3 +88,48 @@ Each phase will build upon the previous one, creating a seamless transition from
 4. Click **Create**.
 5. After creating the IGW, click on the newly created gateway and choose **Actions > Attach to VPC**.
 - Select the VPC you just created (e.g., CE7-Grp3-VPC) and click **Attach**.
+
+**Step 3: Create a Subnet**
+
+1. In the VPC Dashboard, go to **Subnets** and click **Create subnet**.
+2. Configure the subnet:
+- **Name tag**: CE7-Grp3-Subnet
+- **VPC**: Choose CE7-Grp3-VPC from the drop-down.
+- **Availability Zone**: us-east-1a
+- **IPv4 CIDR block**: 10.0.1.0/24
+- Enable **Auto-assign Public IPv4 Address** to ensure instances launched in this subnet get public IPs.
+3. Click **Create**.
+
+**Step 4: Create a Route Table**
+
+1. In the VPC Dashboard, go to **Route Tables** and click **Create route table**.
+2. Configure the route table:
+- **Name tag**: CE7-Grp3-RouteTable
+- **VPC**: Select CE7-Grp3-VPC
+3. Click **Create**.
+4. Select the route table, go to the **Routes** tab, and click **Edit routes**.
+5. Add a route with the following:
+- **Destination**: 0.0.0.0/0
+- **Target**: Choose the Internet Gateway (CE7-Grp3-IGW).
+6. Click **Save routes**.
+
+**Step 5: Associate Route Table with Subnet**
+
+1. Go to the **Subnet Associations** tab of the route table you just created.
+2. Click **Edit subnet associations**.
+3. Select the subnet (CE7-Grp3-Subnet) you created earlier and click **Save**.
+
+**Step 6: Create a Security Group**
+
+1. In the VPC Dashboard, go to **Security Groups** and click **Create security group**.
+2. Configure the security group:
+- **Name tag**: CE7-Grp3-SG
+- **VPC**: Choose CE7-Grp3-VPC
+3. Under **Inbound rules**, click **Edit inbound rules** and add the following:
+- **Type**: HTTP
+- **Port range**: 80
+- **Source**: 0.0.0.0/0
+4. Under **Outbound rules**, click **Edit outbound rules** and leave it as default (allow all outbound traffic).
+5. Click **Create security group**.
+
+
