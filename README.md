@@ -239,8 +239,9 @@ Each phase will build upon the previous one, creating a seamless transition from
 
 **Step 4: Manage and Monitor Resources on AWS**
 
-1. Once your EC2 instance is created, you can access its **public IP** through a browser to view the "**Hello, World!**" message served by Apache.
-2. Navigate to **CloudWatch**, and look for the dashboard named "**CE7-Grp3-CloudWatchDashboard**" under **Dashboards**. You should be able to see the EC2 instance metrics from the CloudWatch Dashboard you created.
+1. Verify that all resources were created on the AWS Management Console.
+2. Once your EC2 instance is created, you can access its **public IP** through a browser to view the "**Hello, World!**" message served by Apache.
+3. Navigate to **CloudWatch**, and look for the dashboard named "**CE7-Grp3-CloudWatchDashboard**" under **Dashboards**. You should be able to see the EC2 instance metrics from the CloudWatch Dashboard you created.
 
 **Step 5: Clean Up Resources**
 
