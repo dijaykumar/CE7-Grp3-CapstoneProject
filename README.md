@@ -191,3 +191,68 @@ Each phase will build upon the previous one, creating a seamless transition from
 - Click **Run query** to preview the results.
 9. Choose **Time series**, **Table**, or another visualization and click **Create widget** to add it to your CloudWatch Dashboard.
 10. After the widget is added, click **Save dashboard** in the top-right corner.
+
+------------
+
+### Phase 2: Infrastructure as Code with Terraform
+
+**Prerequisites**
+
+1. Download and install **Terraform**. Configure Terraform to your system's **PATH** environment variable.
+2. Download and install **AWS CLI**. After installation, open a Command Prompt or PowerShell window and run the **aws configure** command to configure your AWS CLI.
+
+![image](https://github.com/user-attachments/assets/2c64d827-c1bb-4503-bf57-0c886fc9c856)
+
+3. Download and install a **Text Editor** or **IDE** for Writing Terraform Code like **Visual Studio Code** (VS Code). In VS Code, install the **Terraform Extension**.
+
+![image](https://github.com/user-attachments/assets/6fa97168-3009-4be7-87c9-165c2b4a9f32)
+
+**Step 1: Set Up Your Project Structure**
+
+1. Open VS Code and create a **new folder** (e.g., **CE7-Grp3-CapstoneProject**).
+2. Inside this folder, create three files as follows:
+- **main.tf** (for your main infrastructure resources like VPC, EC2, etc.)
+- **cloudwatch.tf** (for your CloudWatch dashboard configuration)
+- **scripts/install_helloworld.sh** (for your EC2 user data script)
+
+![image](https://github.com/user-attachments/assets/7acb3f0c-2149-410f-9d0f-133cbe88e9dc)
+
+3. Go to **File** > **Open Folder** and select the folder you just created.
+
+**Step 2: Writing Terraform Code in VS Code**
+
+1. Copy the content of main.tf, cloudwatch.tf, and scripts/install_helloworld.sh uploaded in this repo and paste it into the respective files in VS Code.
+
+**Step 3: Initialize, Plan, and Apply the Terraform Configuration**
+
+1. Initialize the Terraform working directory by opening a **terminal** in VS Code and run the **terraform init** command in your project folder.
+
+![image](https://github.com/user-attachments/assets/305fffeb-ccc8-48dd-b60c-7c71c997eca8)
+
+2. Before applying your changes, you should review the execution plan. In the terminal, run **terraform plan**. This will show you what Terraform plans to create, modify, or destroy.
+
+![image](https://github.com/user-attachments/assets/949080a2-9338-4c19-80ed-ad0baf0880bc)
+
+3. If the plan looks good, apply the configuration by running **terraform apply**. Terraform will ask for confirmation to proceed. Type **yes** to continue.
+
+![image](https://github.com/user-attachments/assets/3900c0e7-e03b-4982-b9b3-3c7e5492ecec)
+
+**Step 4: Manage and Monitor Resources on AWS**
+
+1. Once your EC2 instance is created, you can access its **public IP** through a browser to view the "**Hello, World!**" message served by Apache.
+2. Navigate to **CloudWatch**, and look for the dashboard named "**CE7-Grp3-CloudWatchDashboard**" under **Dashboards**. You should be able to see the EC2 instance metrics from the CloudWatch Dashboard you created.
+
+**Step 5: Clean Up Resources**
+
+1. After verifying the resources created on AWS by Terraform, clean up your environment by running **terraform destroy** in the same VS Code terminal.
+2. Terraform will prompt for confirmation before removing the resources.
+
+------------
+
+### Phase 3: CI/CD with GitHub Actions
+
+**Prerequisites**
+
+1. 
+
+**Step 1: **
