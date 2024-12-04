@@ -41,6 +41,12 @@ Each phase will build upon the previous one, creating a seamless transition from
 
 ------------
 
+### Project Cloud Infrastructure Diagram:
+
+PASTE HERE
+
+------------
+
 ### Project Resources and Naming Conventions:
 
 **Platforms**
@@ -254,6 +260,47 @@ Each phase will build upon the previous one, creating a seamless transition from
 
 **Prerequisites**
 
-1. 
+1. **GitHub Account**.
+2. **Git Installed**: Ensure Git is installed on your local system.
+3. **AWS Credentials**: You need your AWS **AWS_ACCESS_KEY_ID** and **AWS_SECRET_ACCESS_KEY**.
 
-**Step 1: **
+**Step 1: Initialize the GitHub Repository**
+
+1. Create the GitHub Repository:
+- Go to **GitHub** and log in.
+- Click the **+ sign** in the top-right corner and select **New repository**.
+- Name the repository **CE7-Grp3-CapstoneProject**.
+- Set it to **Public** or **Private** depending on your preference.
+- Click **Create repository**.
+
+2. Clone the Repository to Your Local Machine:
+- Copy the **HTTPS URL** of the repo (e.g., https://github.com/dijaykumar/CE7-Grp3-CapstoneProject).
+- Open **Git Bash** (or Command Prompt with Git) on your local machine.
+- Navigate to the folder where you want to store your project and run **git clone https://github.com/dijaykumar/CE7-Grp3-CapstoneProject**.
+
+![image](https://github.com/user-attachments/assets/11511c93-7a38-45fd-b1f4-0e6edabd5609)
+
+**Step 2: Move Your Files to the GitHub Repo**
+
+1. Copy all the files (**main.tf**, **cloudwatch.tf**, **scripts/install_helloworld.sh**) from your local Terraform project folder into the cloned GitHub repository folder (**CE7-Grp3-CapstoneProject**).
+2. Inside your cloned repo, create a **new folder** for GitHub Actions workflows (**.github/workflows**).
+3. Inside .github/workflows folder, create two YAML files for the workflows:
+- **create-environment.yml**
+- **destroy-environment.yml**
+4. Copy and paste the respective codes from the yml files uploaded in this repo using VS Code.
+
+**Step 3: Set Up GitHub Secrets**
+
+1. Navigate to GitHub Secrets:
+- Go to your repository on GitHub.
+- Click on **Settings** > **Secrets and variables** > **Actions** > **New repository secret**.
+
+2. Add AWS Credentials as Secrets:
+- **AWS_ACCESS_KEY_ID**: Your AWS Access Key ID.
+- **AWS_SECRET_ACCESS_KEY**: Your AWS Secret Access Key.
+
+These secrets will be used in the GitHub workflows for authentication with AWS.
+
+
+
+
