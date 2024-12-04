@@ -299,7 +299,30 @@ PASTE HERE
 - **AWS_ACCESS_KEY_ID**: Your AWS Access Key ID.
 - **AWS_SECRET_ACCESS_KEY**: Your AWS Secret Access Key.
 
+![image](https://github.com/user-attachments/assets/d5cfeca5-efad-45df-98b0-2f0b5404707d)
+
 These secrets will be used in the GitHub workflows for authentication with AWS.
+
+**Step 4: Add and Commit the Changes**
+
+1. Add the files to Git:
+- Open the **Git Bash** terminal in the project folder.
+- **Add** the changes by typing **git add .**
+
+![image](https://github.com/user-attachments/assets/808fd838-6a2a-4001-bdcc-572d608828ce)
+
+2. **Commit** the changes by typing **git commit -m "Initial commit with Terraform files and GitHub Actions workflows"**
+
+![image](https://github.com/user-attachments/assets/a34383b6-d118-4395-817e-f4f0d55738de)
+
+3. **Push** the changes to GitHub by typing **git push origin main**
+
+![image](https://github.com/user-attachments/assets/1b9b4237-e777-48f0-bf37-3ca6cdea0ceb)
+
+**Step 5: Configure Terraform State Management**
+
+1. **Ensure the S3 Bucket Exists**: Verify that your terraform.tfstate will be stored in the bucket sctp-ce7-tfstate in the region us-east-1.
+2. **Check IAM Permissions**: The IAM user whose AWS credentials you're using in the GitHub Secrets should have the necessary permissions to read and write to the S3 bucket. The user should also have permission to create, modify, and destroy resources defined in your Terraform configuration.
 
 
 
