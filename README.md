@@ -324,6 +324,20 @@ These secrets will be used in the GitHub workflows for authentication with AWS.
 1. **Ensure the S3 Bucket Exists**: Verify that your terraform.tfstate will be stored in the bucket sctp-ce7-tfstate in the region us-east-1.
 2. **Check IAM Permissions**: The IAM user whose AWS credentials you're using in the GitHub Secrets should have the necessary permissions to read and write to the S3 bucket. The user should also have permission to create, modify, and destroy resources defined in your Terraform configuration.
 
+**Step 6: Test the GitHub Actions Workflows**
 
+1. Trigger the Create Environment Workflow:
+- Manually trigger the workflow from GitHub Actions > Run workflow.
+- This will start the create-environment.yml workflow to create the resources in AWS.
+- Verify the resources by checking the AWS console to ensure the resources (VPC, Subnet, EC2, etc.) have been created as expected.
 
+![image](https://github.com/user-attachments/assets/cf05c11c-3f76-434d-a77a-dc54ad48de60)
+
+2. Trigger the Destroy Environment Workflow:
+- To destroy the environment, manually trigger the destroy-environment.yml workflow from GitHub Actions.
+- Verify destruction by checking the AWS console to confirm the resources are destroyed.
+
+![image](https://github.com/user-attachments/assets/23aaff4f-d867-4291-85e0-ae91ad0fb186)
+
+------------
 
