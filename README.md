@@ -357,6 +357,8 @@ These secrets will be used in the GitHub workflows for authentication with AWS.
 Healthy
 ![image](https://github.com/user-attachments/assets/917fef34-d9c8-4880-916a-6e975d6e77f7)
 
+![image](https://github.com/user-attachments/assets/a50aaf91-d6a7-454d-8cdd-810739b98acd)
+
 ------------
 
 ### Future Improvements
