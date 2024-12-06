@@ -345,7 +345,13 @@ These secrets will be used in the GitHub workflows for authentication with AWS.
 
 ### Results
 
+![image](https://github.com/user-attachments/assets/9ce13235-e6c9-4132-9863-434e29aba8c8)
 
+![image](https://github.com/user-attachments/assets/9522c406-4412-4b20-8477-f9aba8ddc822)
+
+![image](https://github.com/user-attachments/assets/5b23501c-3604-4973-942a-2ccf4f876e87)
+
+![image](https://github.com/user-attachments/assets/dd82b76c-9362-4ca1-b3aa-06480967e08c)
 
 ------------
 
