@@ -43,7 +43,7 @@ Each phase will build upon the previous one, creating a seamless transition from
 
 ### Project Cloud Infrastructure Diagram:
 
-![image](https://github.com/user-attachments/assets/27af36f6-5337-4896-9478-6cae809ea51f)
+![image](https://github.com/user-attachments/assets/81665791-91f9-4a0e-9276-c3ceaf420a46)
 
 ![image](https://github.com/user-attachments/assets/9feef71e-a3f1-469d-a6d9-56452c5da800)
 
