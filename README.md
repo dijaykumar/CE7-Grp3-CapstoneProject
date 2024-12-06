@@ -360,6 +360,10 @@ Healthy
 
 ### Future Improvements
 
+For future improvements, we could enhance the scalability and reliability of our system by implementing auto-scaling for EC2 instances to handle varying traffic loads. Additionally, integrating more advanced monitoring tools like AWS X-Ray for application performance tracing and expanding CloudWatch alarms to cover more metrics could improve the system's responsiveness. We could also explore cost optimization strategies, such as using spot instances or reserved instances, and strengthen security by incorporating AWS WAF for better protection against malicious traffic. Finally, we could automate the deployment pipeline further with more granular testing and validation steps.
+
 ------------
 
 ### Learnings
+
+In this project, we learned how to effectively use AWS services to deploy and monitor a web application. Through the AWS Console, Terraform, and GitHub Actions, we gained experience in provisioning resources, automating infrastructure, and setting up continuous deployment pipelines. We also learned how to create CloudWatch dashboards to monitor EC2 metrics and set alarms for proactive system management. This project helped us understand the importance of automation, monitoring, and security in cloud environments while improving our collaboration and problem-solving skills.
