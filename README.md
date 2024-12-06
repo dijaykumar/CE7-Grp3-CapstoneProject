@@ -63,6 +63,7 @@ Each phase will build upon the previous one, creating a seamless transition from
 - Route Table: CE7-Grp3-RouteTable
 - Security Group: CE7-Grp3-SG
 - Elastic compute cloud (EC2) Instance: CE7-Grp3-EC2
+- Lambda function: CE7-Grp3-LambdaEC2
 - CloudWatch dashboard: CE7-Grp3-CloudWatchDashboard
 - CloudWatch alarm: High CPU Utilization Alarm for ce7_grp3_ec2
 
